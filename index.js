@@ -20,7 +20,8 @@ const randomStr = require("randomstring");
 const app = express();
 
 // public folder becomes the default folder
-app.use("/", express.static("public"));
+//app.use("/", express.static("public"));
+app.use("/public", express.static(path.join(__dirname, 'public')));
 
 app.engine(".hbs", exphbs.engine({
   extname: ".hbs",
